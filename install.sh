@@ -121,7 +121,7 @@ process_results() {
 
     clear
     echo -e "${BLUE}╔═════════════ SCAN RESULTS ═════════════╗${NC}"
-    cat result.csv | awk -F, '$3!="timeout ms" {print} ' | sort -t, -nk2 -nk3 | uniq | head -11 | \
+    cat result.csv | awk -F, '$3!="timeout ms" {print} ' | sort -t, -nk2 -nk3 | uniq | head -21 | \
     awk -F, '{
         success_rate = 100 - $2
         quality = "Poor"
